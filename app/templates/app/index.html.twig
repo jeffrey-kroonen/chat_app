@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chat{% endblock %}
+
+{% block body %}
+
+    <div class="chat-container">
+        <div class="search-container">
+            <input type="text" name="" id="" autocomplete="off" placeholder="Zoeken..">
+        </div>
+        <div class="conversation-list">
+            <!-- Iterate throuh conversations. -->
+            <div class="conversation">
+                <img src="{{ asset('assets/images/icons/user.svg') }}" alt="Unknown user">
+                <div class="title-text">
+                    Gebruiker zonder naamas
+                </div>
+                <div class="created-date">
+                    6 juni
+                </div>
+                <div class="conversation-message">
+                    Het laatse verstuurde bericht.
+                </div>
+            </div>
+        </div>
+        <div class="new-message-container">
+            <a href="">+</a>
+        </div>
+        <div class="chat-title">
+            <span>Jeffrey Kroonen</span>
+            <img src="{{ asset('assets/images/icons/trash.svg') }}" alt="Delete conversation">
+        </div>
+        <div class="chat-message-list">
+            <!-- Iterate through you- and other messages .-->
+            <div class="message-row you-message">
+                <div class="message-content">
+                    <div class="message-text">Oké dan! We proberen
+                        nu even een wat grotere tekst om te kijken
+                        of de tekst nog steeds goed wordt getoond.
+                    </div>
+                    <div class="message-time">6 juni</div>
+                </div>
+            </div>
+            <div class="message-row other-message">
+                <div class="message-content">
+                    <img src="{{ asset('assets/images/icons/user.svg') }}" alt="Image of users">
+                    <div class="message-text">Jammer dit weer.</div>
+                    <div class="message-time">6 juni</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-form">
+            <img src="{{ asset('assets/images/icons/paperclip.svg') }}" alt="Add attachement">
+            <input type="text" name="" placeholder="Type a messageeee">
+        </div>
+    </div>
+
+{% endblock %}
