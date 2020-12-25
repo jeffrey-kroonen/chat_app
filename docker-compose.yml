@@ -18,3 +18,25 @@ services:
     volumes: 
       - ./app:/app
       - ./docker/php-fpm/custom.ini:/etc/php/7.4/fpm/conf.d/custom.ini
+
+  mysql:
+    image: mysql:8.0.22
+    container_name: chat-app-mysql
+    working_dir: /app
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_dev
+      MYSQL_DATABASE: chat_app_db
+      MYSQL_USER: chat_app_usr
+      MYSQL_PASSWORD: chat_app_pwd
+    ports:
+      - 8306:3306
+    volumes: 
+      - ./docker/mysql:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
