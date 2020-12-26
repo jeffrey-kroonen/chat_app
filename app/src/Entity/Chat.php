@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=ChatRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Chat
 {

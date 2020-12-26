@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=FileRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class File
 {

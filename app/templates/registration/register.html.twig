@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Registreren{% endblock %}
+{% block title %}Register{% endblock %}
 
 {% block body %}
     {% for flashError in app.flashes('verify_email_error') %}
@@ -15,11 +15,25 @@
                 <div class="registration-form-widget card">
 
                     <div class="card-header chat-title pt-3 pb-3">
-                        <h1>Registreren</h1>
+                        <h1>Register</h1>
                     </div>
 
                     <div class="card-body">
                     {{ form_start(registrationForm) }}
+
+                        <div class="row regular-input-wrapper">
+                            <div class="col-sm-6 mb-0">
+                                {{ form_row(registrationForm.first_name, {
+                                    label: 'First name'
+                                }) }}
+                            </div>
+                            <div class="col-sm-6 mb-0">
+                                {{ form_row(registrationForm.last_name, {
+                                    label: 'Last name'
+                                }) }}
+                            </div>
+                        </div>
+
                         {{ form_row(registrationForm.email, {
                             label: 'Email address'
                         }) }}
@@ -28,7 +42,7 @@
                         }) }}
                         {{ form_row(registrationForm.agreeTerms) }}
 
-                        <button type="submit" class="btn btn-pri">Registreer</button>
+                        <button type="submit" class="btn btn-pri">Sign up</button>
                     {{ form_end(registrationForm) }}
                     </div>
                 </div>

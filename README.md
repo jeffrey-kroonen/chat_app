@@ -10,8 +10,9 @@ The following list will give you an overview of the development progress. The li
 
 ### Web
 #### User
-- [ ] Add a widget to create a new user.
-    - [ ] If all entered values are correct, insert a new user.
+- [x] Add a widget to create a new user.
+    - [x] If all entered values are correct, insert a new user.
+    - [x] Add email verification.
     - [ ] Log in the new user automatically.
 - [ ] Add a widget to show the current logged in user his/her data.
     - [ ] Add functionality to update the data for the current logged in user.
